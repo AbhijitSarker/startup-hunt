@@ -32,6 +32,16 @@ const Navbar = async () => {
                 </button>
               </form>
 
+              <Link href={`/user`}>
+                <span>
+                  {/* <Image
+                    src={session?.user?.image || ""}
+                  width={40} height={40}
+                    alt={session?.user?.name || ""}
+                  /> */}
+                  {session?.user?.name || ""}
+                </span>
+              </Link>
             </>
           ) : (
             <form
