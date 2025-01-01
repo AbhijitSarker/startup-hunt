@@ -1,5 +1,8 @@
-export default function Home() {
-  return (
+import SearchForm from "@/components/SearchForm";
+
+export default async function Home({ searchParams}: { searchParams: Promise<{ query?: string }>}) {
+
+  const query = (await searchParams).query;  return (
 
     <div>
       <section className="pink_container">
@@ -13,6 +16,7 @@ export default function Home() {
           Competitions.
         </p>
 
+        <SearchForm query={query} />
       </section>
     </ div>
   );
